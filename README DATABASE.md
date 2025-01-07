@@ -74,6 +74,6 @@ Cuando haya cambios en el esquema de la base de datos, estos se agregarán como 
 
 - **Roles de Usuario:** El sistema distingue entre usuarios normales y administradores. El usuario administrador inicial se crea en el archivo `data.sql`.
 - **Configuración Local:** Cada desarrollador puede trabajar con su propia base de datos local mientras se configura la base de datos compartida.
-- **Base de Datos Compartida:** Una vez configurada, los desarrolladores deberán actualizar la configuración de conexión en `config/db.php` para usar la base de datos central.
+- **Base de Datos Compartida:** Una vez configurada, los desarrolladores deberán actualizar la configuración de conexión en `config/database.php` para usar la base de datos central.
 
 ---
