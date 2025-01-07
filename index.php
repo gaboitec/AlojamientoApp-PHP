@@ -1,7 +1,10 @@
 <?php
-require_once './modules/controllers/SessionController.php';
 require_once './modules/controllers/UserController.php';
-require_once './modules/controllers/AdminController.php';
-require_once './modules/controllers/AccomodationController.php';
+require_once './modules/controllers/AcomodationController.php';
 
-$sessionController = new SessionController;
+$UserController = new UserController;
+//$AcomodationController = new AcomodationController;
+
+if (isset($_GET['session'])) {
+    $UserController->login();
+}
