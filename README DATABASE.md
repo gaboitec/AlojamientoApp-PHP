@@ -77,6 +77,3 @@ Cuando haya cambios en el esquema de la base de datos, estos se agregarán como 
 - **Base de Datos Compartida:** Una vez configurada, los desarrolladores deberán actualizar la configuración de conexión en `config/db.php` para usar la base de datos central.
 
 ---
-
-¡Listo! Si tienes dudas sobre cómo trabajar con la base de datos, consulta a tu project manager o revisa este documento.
-
