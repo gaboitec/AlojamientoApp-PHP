@@ -11,8 +11,8 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card shadow">
+                    <h4 class="text-center mb-4 card-header">Crear una Cuenta</h4>
                     <div class="card-body">
-                        <h4 class="text-center mb-4">Crear una Cuenta</h4>
                         <form action="registerAuth.php" method="POST">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Nombre de Usuario:</label>
@@ -28,6 +28,9 @@
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Registrarse</button>
                         </form>
+                    </div>
+                    <div class="card-footer">
+                        <p>Si ya tienes cuenta puedes <a href="./index.php?view=login">iniciar sessión</a></p>
                     </div>
                 </div>
             </div>

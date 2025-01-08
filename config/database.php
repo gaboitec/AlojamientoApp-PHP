@@ -7,7 +7,7 @@ class DataBase
     private $password = "";
     private $conn;
 
-    public function get_conection()
+    public function get_connection()
     {
         try {
             $this->conn = new PDO("mysql:host={$this->host};bdname={$this->bd}", $this->user, $this->password);
