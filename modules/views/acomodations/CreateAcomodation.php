@@ -16,6 +16,16 @@
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre">
                 </div>
+
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Ubicacion</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
                 
                 <div class="col-md-6">
                     <label for="descuento" class="form-label">Imagen</label>
