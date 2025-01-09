@@ -14,7 +14,7 @@
                 <div class="card shadow">
                     <h4 class="text-center mb-4 card-header">Inicia sessión</h4>
                     <div class="card-body">
-                        <form action="login.php" method="POST">
+                        <form action="login.php?view=login" method="POST">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="email" name="correo" required>
