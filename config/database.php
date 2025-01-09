@@ -1,21 +1,27 @@
 <?php
-class DataBase
-{
+class DataBase {
     private $host = "localhost";
-    private $bd = "alojamientos";
-    private $user = "root";
-    private $password = "";
+    private $database_name = "booking";
+    private $username = "root";
+    private $password = "root";
     private $conn;
 
-    public function get_connection()
-    {
+    public function get_connection(){
         try {
-            $this->conn = new PDO("mysql:host={$this->host};bdname={$this->bd}", $this->user, $this->password);
-            $this->conn->exec("set names utf8");
-        } catch (PDOException $error) {
-            echo $error->getMessage();
+            if ($this->conn === null) {
+                $this->conn = new PDO(
+                    "mysql:host=" . $this->host . ";dbname=" . $this->database_name, 
+                    $this->username, 
+                    $this->password,
+                    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
+                );
+                error_log("Database connected successfully");
+                $this->conn->exec("set names utf8");
+            }
+            return $this->conn;
+        } catch(PDOException $e) {
+            error_log("Connection Error: " . $e->getMessage());
+            throw new Exception("Database connection failed");
         }
-
-        return $this->conn;
     }
-}
+} 

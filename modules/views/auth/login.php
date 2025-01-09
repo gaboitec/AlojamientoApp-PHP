@@ -14,7 +14,12 @@
                 <div class="card shadow">
                     <h4 class="text-center mb-4 card-header">Inicia sessión</h4>
                     <div class="card-body">
-                        <form action="login.php" method="POST">
+                        <?php if (isset($viewData['error'])): ?>
+                            <div class="alert alert-danger">
+                                <?php echo htmlspecialchars($viewData['error']); ?>
+                            </div>
+                        <?php endif; ?>
+                        <form action="<?php echo htmlspecialchars('./index.php?action=login'); ?>" method="POST">
                             <div class="mb-3">
                                 <label for="email" class="form-label">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="email" name="correo" required>

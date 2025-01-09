@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header('Location: ./index.php?view=login');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +14,9 @@
 </head>
 <body>
     <?php include './modules/views/components/navbar.php'?>
+    <div class="container mt-3">
+        <?php include './modules/views/components/messages.php'; ?>
+    </div>
     <h2 class="text-center mt-2">Agregar un nuevo alojamiento</h2>
     <main class="container mt-2">
         <section>
@@ -18,13 +27,13 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label for="nombre" class="form-label">Ubicacion</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
+                    <label for="ubicacion" class="form-label">Ubicacion</label>
+                    <input type="text" class="form-control" id="ubicacion" name="ubicacion">
                 </div>
 
                 <div class="col-md-6">
-                    <label for="nombre" class="form-label">Precio</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="number" step="0.01" class="form-control" id="precio" name="precio">
                 </div>
                 
                 <div class="col-md-6">

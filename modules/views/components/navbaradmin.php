@@ -1,9 +1,22 @@
-<nav class="navbar">
-  <div class="container-fluid">
-  <a class="link-offset-2 link-underline link-underline-opacity-0" href="./index.php?view="><span class="navbar-brand mb-0 h1">AlojamientosAPP</span></a>
-    <div>
-      <a class="btn btn-outline-success" href="./index.php?view=createAcomodation">Agregar Alojamiento</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="./index.php">AccommodationsAPP</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.php?view=showAcomodations">Accommodations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.php?view=showUsers">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.php?view=profile">My Profile</a>
+                </li>
+            </ul>
+            <span class="navbar-text me-3">
+                Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>
+            </span>
+            <a href="./index.php?action=logout" class="btn btn-outline-danger">Logout</a>
+        </div>
     </div>
-    
-  </div>
 </nav>

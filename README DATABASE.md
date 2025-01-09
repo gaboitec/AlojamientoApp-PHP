@@ -77,3 +77,29 @@ Cuando haya cambios en el esquema de la base de datos, estos se agregarán como 
 - **Base de Datos Compartida:** Una vez configurada, los desarrolladores deberán actualizar la configuración de conexión en `config/database.php` para usar la base de datos central.
 
 ---
+
+# Database Setup Instructions
+
+1. Create Database
+- Run the schema.sql file to create the database and tables
+- Run the data.sql file to populate initial data
+
+2. Database Configuration
+- Copy config/database.example.php to config/database.php
+- Update the database credentials in config/database.php
+
+3. Tables Structure
+- users: Stores user information and authentication
+- accommodations: Stores accommodation listings
+- user_favorites: Links users with their favorite accommodations
+
+4. Initial Data
+- Admin user: admin@example.com / admin123
+- Sample accommodations are included
+
+5. Troubleshooting
+- Ensure MySQL/MariaDB is running
+- Check database connection credentials
+- Verify table permissions
+
+---

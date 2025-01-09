@@ -2,7 +2,7 @@
 CREATE DATABASE alojamientos;
 
 -- Usar la base de datos
-USE alojamientos;
+USE booking;
 
 -- Tabla de usuarios
 CREATE TABLE users (
@@ -26,13 +26,13 @@ CREATE TABLE accommodations (
 );
 
 -- Tabla de relación entre usuarios y alojamientos
-CREATE TABLE user_accommodations (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE user_favorites (
     user_id INT NOT NULL,
     accommodation_id INT NOT NULL,
-    added TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE, -- Relación con la tabla users
-    FOREIGN KEY (accommodation_id) REFERENCES accommodations(id) ON DELETE CASCADE -- Relación con la tabla accommodations
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, accommodation_id),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (accommodation_id) REFERENCES accommodations(id) ON DELETE CASCADE
 );
 
 -- Verificación de las tablas creadas
